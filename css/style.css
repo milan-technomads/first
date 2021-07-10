@@ -1,0 +1,256 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Poppins;
+  font-size: 16px;
+  width: 100;
+  height: 100vh;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  width: 35%;
+  height: 80%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.left__header {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52.8px;
+}
+.left__text {
+  margin-top: 32px;
+}
+
+.right {
+  width: 32%;
+  min-width: 400px;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.right__banner {
+  width: 100%;
+  height: 48px;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;  
+  box-shadow: 0 8px 2px rgba(124, 115, 122, 0.438);
+  color: white;
+}
+
+.right__banner .p {
+  font-weight: 400;
+  font-size: 14.4px;
+  text-align: center;
+  color: hsl(246, 25%, 77%);
+}
+
+.right__banner span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.right__form {
+  width: 100%;
+  height: 65%;
+  padding-top:5%;
+  padding-bottom: 5%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text__err {
+    font-size: 10.4px;
+    text-align: end;
+    color: hsl(0, 100%, 74%);
+}
+
+.right__form__form {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.composite {
+  width: 100%;
+}
+
+.ierror {
+  width: 100%;
+  height: 48px;
+  position: relative;
+}
+
+.ierror:not(error) {
+  border: 0;
+}
+
+.ierror.error {
+  border: 1px solid hsl(0, 100%, 74%);
+}
+
+.ierror__text {
+  color: hsl(0, 100%, 74%);
+  text-indent: 32px;
+  font-size: 12.8px;
+  position: absolute;
+  top: 50%;
+}
+
+.right__form__form  .composite  .ierror input {
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  border-radius: 5px;
+  text-indent: 32px;
+  border: 1px solid hsl(246, 25%, 77%);
+  position: absolute;
+}
+
+.ierror img {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input:not(error) {
+  visibility: visible;
+}
+
+input.error {
+  visibility: hidden;
+}
+
+.right__button {
+  width: 100%;
+  height: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  outline: none;
+  border: 1px solid hsl(154, 59%, 51%);
+  filter: blur(0.4px);
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.right__button:active {
+  box-shadow: 1px 2px 10px hsl(154, 59%, 51%);
+}
+
+.right__fineprint {
+  font-weight: 400;
+  font-size: 10.4px;
+  color: hsl(246, 25%, 77%);
+  filter: blur(0.3px);
+  /* margin-top: -3%; smove closer to button on top */
+}
+
+.red--text {
+  color: hsl(0, 100%, 74%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+
+
+
+/* responcive Design */
+@media(max-width:800px){
+    .main{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left{
+        min-width: 350px;
+        height: 300px;
+    }
+
+    .right{
+        min-width: 350px;
+        height: 600px;
+    }
+
+    .left__header{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 52.8px;
+        text-align: center;
+    }
+
+    .left__text{
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .right__banner{
+        width: 100%;
+        height: 96px;
+
+    }
+
+    .right__banner .p{
+        margin: 0 auto;
+        text-align: center;
+        width: 60%;
+    }
+
+    .right__fineprint{
+        width: 70%;
+        font-size: 9.6px;
+        text-align: center;
+    }
+}
