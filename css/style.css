@@ -239,6 +239,7 @@ input.error {
     .right__banner{
         width: 100%;
         height: 96px;
+        justify-content: center;
 
     }
 
